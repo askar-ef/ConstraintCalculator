@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textSize="45sp"
+        android:layout_marginTop="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    
+    <TextView
+        android:id="@+id/num_opera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/num_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="15dp"
+        android:textSize="40dp"
+        android:text="8+2"
+        android:textColor="@color/material_dynamic_neutral50"/>
+
+    <TextView
+        android:id="@+id/num_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/line8"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="10"
+        android:layout_marginRight="15dp"
+        android:textSize="60dp"
+        android:textStyle="bold"/>
+
+<!--    garis     -->
+    <View
+        app:layout_constraintBottom_toTopOf="@+id/line8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@color/black"/>
+
+
+
+<!--    vertikal    -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+<!--    horizontal    -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.73"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.61"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.49"/>
+
+<!--    row 1     -->
+   <androidx.appcompat.widget.AppCompatButton
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:background="@drawable/btn_calc"
+       android:text="0"
+       app:layout_constraintBottom_toBottomOf="@id/line4"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="@+id/line2"
+       app:layout_constraintTop_toTopOf="@+id/line5"
+        android:layout_margin="10dp"
+       android:textSize="40dp"
+       />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@id/line4"
+        app:layout_constraintStart_toStartOf="@+id/line2"
+        app:layout_constraintEnd_toEndOf="@+id/line3"
+        app:layout_constraintTop_toTopOf="@+id/line5"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="@id/line4"
+        app:layout_constraintStart_toStartOf="@+id/line3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/line5"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+<!--    row 2    -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@id/line5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/line1"
+        app:layout_constraintTop_toTopOf="@+id/line6"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="2"
+        app:layout_constraintStart_toStartOf="@id/line1"
+        app:layout_constraintBottom_toBottomOf="@id/line5"
+        app:layout_constraintTop_toTopOf="@+id/line6"
+        app:layout_constraintEnd_toEndOf="@+id/line2"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="3"
+        app:layout_constraintStart_toStartOf="@id/line2"
+        app:layout_constraintBottom_toBottomOf="@id/line5"
+        app:layout_constraintTop_toTopOf="@+id/line6"
+        app:layout_constraintEnd_toEndOf="@+id/line3"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="/"
+        app:layout_constraintStart_toStartOf="@id/line3"
+        app:layout_constraintBottom_toBottomOf="@id/line5"
+        app:layout_constraintTop_toTopOf="@+id/line6"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+<!-- row 3  -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="@id/line6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/line1"
+        app:layout_constraintTop_toTopOf="@+id/line7"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="8"
+        app:layout_constraintStart_toStartOf="@id/line1"
+        app:layout_constraintBottom_toBottomOf="@id/line7"
+        app:layout_constraintTop_toTopOf="@+id/line8"
+        app:layout_constraintEnd_toEndOf="@+id/line2"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="9"
+        app:layout_constraintStart_toStartOf="@id/line2"
+        app:layout_constraintBottom_toBottomOf="@id/line7"
+        app:layout_constraintTop_toTopOf="@+id/line8"
+        app:layout_constraintEnd_toEndOf="@+id/line3"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="@id/line3"
+        app:layout_constraintBottom_toBottomOf="@id/line7"
+        app:layout_constraintTop_toTopOf="@+id/line8"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+
+    <!-- row 4  -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="7"
+        app:layout_constraintBottom_toBottomOf="@id/line7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/line1"
+        app:layout_constraintTop_toTopOf="@+id/line8"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="5"
+        app:layout_constraintStart_toStartOf="@id/line1"
+        app:layout_constraintBottom_toBottomOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@+id/line7"
+        app:layout_constraintEnd_toEndOf="@+id/line2"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="6"
+        app:layout_constraintStart_toStartOf="@id/line2"
+        app:layout_constraintBottom_toBottomOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@+id/line7"
+        app:layout_constraintEnd_toEndOf="@+id/line3"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_calc"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="@id/line3"
+        app:layout_constraintBottom_toBottomOf="@id/line6"
+        app:layout_constraintTop_toTopOf="@+id/line7"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="40dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
